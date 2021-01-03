@@ -33,7 +33,7 @@ export class DeleteEmpresaComponent implements OnInit {
   btnSim(){
     this.empresaService.deleteEmpresa(this.empresa.id).subscribe(() => {
       this.router.navigate(['/cadastro-empresa'])
-      this.alert.showAlertSuccess('empresa apagado com sucesso!!')
+      this.alert.showAlertInfo('Empresa apagada com sucesso!!')
     })
   }
 
