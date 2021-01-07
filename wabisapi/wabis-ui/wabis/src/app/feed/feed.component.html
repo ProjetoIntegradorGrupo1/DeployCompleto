@@ -87,9 +87,9 @@
 
             <div class="col-md-10 pr-0">
 
-              <input class="form-control w-100" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar"
+              <input class="form-control" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar"
                 [(ngModel)]='titulo'>
-
+              
             </div>
 
             <div class="col-md-2 pl-0">
@@ -159,6 +159,7 @@
 
           <div class="row">
             <div class="col-md-12" *ngFor="let item of listaEmpresas | orderBy : key : reverse">
+
               <div *ngFor='let post of item.postagem'>
 
                 <div class="card mt-5 mb-5 fundo-card shadow">
@@ -167,7 +168,7 @@
                     <div class="row d-flex align-items-center ">
                       <div class="col-md-12  ">
                         <h5 class="card-title "> {{post.titulo}} </h5>
-                        
+                        <small>Empresa: {{item.nome}} </small>
                       </div>
                     </div>
                   </div>
